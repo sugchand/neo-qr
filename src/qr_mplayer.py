@@ -28,7 +28,7 @@ class qr_mplayer():
     def video_play(self, video_src = None):
         if video_src is None:
             return
-        self.os_lib.execute_cmd("cvlc", [video_src])
+        self.os_lib.execute_cmd("cvlc", [video_src, "--play-and-exit"])
 
     def get_video_src_from_qr(self, qrcode):
         if not qr_code_dic.qr_video_dic.has_key(qrcode):

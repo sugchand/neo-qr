@@ -66,6 +66,8 @@ class qr_reader():
                 # Exit on valid QR code result
                 break
         cv2.destroyWindow("neoQR-preview")
+        # Bug in opencv, need to call waitkey with imshow to kill the window
+        # completely. Otherwise the window get closed only when program exits.
         cv2.waitKey(-1)
         cv2.imshow("neoQR-preview", frame)
         self.os_lib.remove_file_matched_ext(curr_dir, 'jpg')
