@@ -1,3 +1,12 @@
+#! /usr/bin/python
+# -*- coding: utf8 -*-
+# The QR code generator using python qr-code.
+#
+__author__ = "Sugesh Chandran"
+__copyright__ = "Copyright (C) The neoview team."
+__license__ = "GNU Lesser General Public License"
+__version__ = "1.0"
+
 import os
 import wx
 import sys
